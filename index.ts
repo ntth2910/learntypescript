@@ -6,10 +6,13 @@ type numArr = Array<number>
 
 //tra ve phan tu cuoi cung cua array: lenght-1
 const last =(arr : Array<any>)=> arr[arr.length -1]
+
 const l1 = last([1,2,3])
 // console.log(l1)
 const l2 = last([2,3,'thuha'])
 // console.log(l2)
+
+
 
 // neu T la string thi array cung thuoc dang string, dat T hay XYZ deu duoc
 const lastT= <T>(arr : Array<T>)=> arr[arr.length -1]
@@ -48,7 +51,7 @@ const makeTupleWithDefaut =<X,Y = number>(x:X,y:Y):[X,Y]=>[x,y]
 const m11 = makeTupleWithDefaut<string | null>('abc',3)
 
 // GENERICS EXTENDS
-const makeFullName = obj => ({
+const makeFullName = (obj:any) => ({
     ...obj,
     fullName: ` ${obj.firstName} ${obj.lastName}`
 })
